@@ -6,8 +6,7 @@ loop {
     try {
         $letter-amount = prompt('Number of letters to generate? ').Int;
         
-        say "The number of letters to generate must be positive" if $letter-amount <= 0;
-        last if $letter-amount > 0;
+        if $letter-amount <= 0 { say "The number of letters to generate must be positive"; } else { last; }
 
         CATCH {
             default {
